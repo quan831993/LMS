@@ -1,0 +1,178 @@
+@import "../global.scss";
+
+.course-component {
+    padding: 0px 314px;
+
+    p {
+        font-family: 'Roboto Flex';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 30px;
+        line-height: 35px;
+        color: $black;
+    }
+
+    span {
+        font-family: 'Roboto Flex';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 26px;
+        color: $search;
+        padding-top: 9px;
+    }
+
+    .course-container {
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        gap: 45px 30px;
+        padding-top: 30px;
+
+        .course {
+            border: 1px solid $gray;
+            border-radius: 8px;
+
+            .course-header {
+                position: relative;
+                border-radius: 8px;
+
+                .lv {
+                    top:10px;
+                    left: 10px;
+                    padding: 7px 8px;
+                    border-radius: 60px;
+                    background-color: $white;
+                    position: absolute;
+                    display: grid;
+                    grid-template-columns: auto auto;
+                    gap: 8px;
+
+                    .lv-bar {
+                        display: grid;
+                        grid-template-columns: auto auto auto;
+                        gap: 2px;
+                        align-items: center;
+
+                        .lv1 {
+                            width: 10px;
+                            height: 6px;
+                            background-color: $gray;
+                        }
+
+                        #green {
+                            background-color: $green;
+                        }
+                    }
+
+                    p {
+                        font-family: 'Roboto Flex';
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: 14px;
+                        line-height: 16px;
+                        color: $search;
+                    }
+
+                }
+
+                img {
+                    height: 173px;
+                    border-radius: 8px;
+                    width: 100%;
+                }
+            }
+
+            .course-info {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                p {
+                    font-family: 'Roboto Flex';
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 17px;
+                    line-height: 26px;
+                    color: $black;
+                    padding: 15px 20px 10px 20px;
+                    cursor: pointer;
+
+                    &:hover {
+                        color: $red;
+                    }
+                }
+
+                span {
+                    font-family: 'Roboto Flex';
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 14px;
+                    line-height: 18px;
+                    color: $search;
+                    padding: 0px 20px 15px 20px;
+                    border-bottom: 1px solid $border;
+                }
+            }
+
+            .course-stt {
+                padding: 10px 20px;
+                display: flex;
+
+                .menu {
+                    margin-right: 12px;
+                    display: grid;
+                    grid-template-columns: auto auto;
+                    align-items: center;
+                    gap: 5px;
+
+                    p {
+                        font-family: 'Roboto Flex';
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: 14px;
+                        line-height: 16px;
+                        color: $routeStt;
+                        margin-left: 5px;
+                    }
+                }
+            }
+        }
+    }
+
+    .button {
+        padding: 40px;
+        display: flex;
+        align-items: center;
+
+        button {
+            margin: 0 auto;
+            color: $red;
+            padding: 20px 55px;
+            background-color: $white;
+            border-radius: 8px;
+            border: 2px solid $red;
+        }
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .course-component {
+        padding: 80px 16px;
+
+        .course-container {
+            grid-template-columns: auto;
+
+            .course {
+                .course-header {
+                    img {
+                        height: 300px;
+                    }
+                }
+
+                .course-info {
+                    align-items: flex-start;
+                }
+            }
+        }
+    }
+}

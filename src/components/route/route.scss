@@ -1,0 +1,108 @@
+@import "../global.scss";
+
+.route-component {
+    padding: 80px 314px;
+    span {
+        font-family: 'Roboto Flex';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 30px;
+        line-height: 35px;
+        color: $black;
+    }
+
+    p {
+        font-family: 'Roboto Flex';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 26px;
+        color: $search;
+    }
+
+    .route-container {
+        padding-top: 50px;
+        display: grid;
+        grid-template-columns: auto auto;
+        gap: 30px;
+
+        .route {
+            padding: 10px;
+            display: grid;
+            grid-template-columns: auto auto;
+            gap: 20px;
+            border: 1px solid $gray;
+            border-radius: 8px;
+
+            .image {
+                position: relative;
+
+                .tag {
+                    position: absolute;
+                    right: 0px;
+                    bottom: 4px;
+
+                }
+            }
+
+            .route-info {
+                p {
+                    font-family: 'Roboto Flex';
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 17px;
+                    line-height: 26px;
+                    color: $routeTitle;
+                    border-bottom: 1px solid $borderBottom;
+                    padding-bottom: 12px;
+                    padding: 0px;
+                }
+
+                .route-stt {
+                    display: flex;
+                    padding-top: 12px;
+                    .stt {
+                        margin-right: 12px;
+                        display: grid;
+                        grid-template-columns: auto auto;
+                        align-items: center;
+                        gap: 5px;
+
+                        p {
+                            border-bottom: none;
+                            font-family: 'Roboto Flex';
+                            font-style: normal;
+                            font-weight: 400;
+                            font-size: 14px;
+                            line-height: 16px;
+                            color: $routeStt;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .button{
+        padding: 40px;
+        display: flex;
+        align-items: center;
+        button{
+            margin: 0 auto;
+            color: $red;
+            padding: 20px 55px;
+            background-color: $white;
+            border-radius: 8px;
+            border: 2px solid $red;
+        }
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .route-component{
+        padding: 80px 16px;
+        .route-container{
+            grid-template-columns: auto;
+            
+        }
+    }
+}

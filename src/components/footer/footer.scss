@@ -1,0 +1,22 @@
+@import "../global.scss";
+
+.footer {
+    background-color: $footerBg;
+    p {
+        font-family: 'Roboto Flex';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 16px;
+        color: $search;
+        padding: 40px 314px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .footer{
+        p{
+            padding: 40px 16px;
+        }
+    }
+}

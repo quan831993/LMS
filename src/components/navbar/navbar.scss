@@ -1,0 +1,100 @@
+@import "../global.scss";
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.header {
+    padding: 20px 0px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    i{
+        display: none;
+    }
+    .sub-ava{
+        display: none;
+    }
+    .header-left {
+        display: flex;
+        align-items: center;
+    }
+
+    .header-right {
+        display: grid;
+        grid-template-columns: auto auto;
+        gap: 410px;
+        .header-right1 {
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+            gap: 26px;
+            align-items: center;
+
+            .menu {
+                display: grid;
+                grid-template-columns: auto auto;
+                gap: 9px;
+                text-align: center;
+                align-items: center;
+
+                p {
+                    font-family: 'Roboto Flex';
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 15px;
+                    line-height: 26px;
+                    color: $black;
+                    cursor: pointer;
+                    &:hover{
+                        color: $red;
+                    }
+                }
+            }
+        }
+        .header-right2{
+            display: grid;
+            grid-template-columns: auto auto;
+            gap: 40px;
+            align-items: center;
+            .search-box{
+                position: relative;
+                input{
+                    height: 50px;
+                    border-radius: 8px;
+                    border: 1px solid $gray;
+                    padding: 18px 94px 16px 58px;
+                }
+                i{
+                    position: absolute;
+                    top: 18px;
+                    left: 18px;
+                    color: $search;
+                    display: block;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 576px){
+    .header{
+        justify-content: space-between;
+        padding: 24px 18px;
+        align-items: center;
+        i{
+            display: flex;
+            color: $black;
+        }
+        .header-left{
+            display: none;
+        }
+        .header-right{
+            display: none;
+        }
+        .sub-ava{
+            display: block;
+        }
+    }
+}
