@@ -1,6 +1,11 @@
 import "../navbar/navbar.scss";
-
+import { useEffect, useState } from "react";
 function Navbar() {
+    let [avatar, setAvatar]= useState("https://res.cloudinary.com/dqccfamas/image/upload/v1680667229/Rectangle_190_o429ft.png")
+    function handleImg() {
+        setAvatar('https://res.cloudinary.com/dqccfamas/image/upload/v1678761199/cld-sample-4.jpg')
+    }
+
     return (
         <div className="header">
             <i className="fa-solid fa-list"></i>
@@ -32,7 +37,7 @@ function Navbar() {
                         <input type="text" placeholder="Bạn muốn học gì hôm nay?" />
                         <i className="fa-solid fa-magnifying-glass"></i>
                     </div>
-                    <img src="https://res.cloudinary.com/dqccfamas/image/upload/v1680667229/Rectangle_190_o429ft.png" alt="" />
+                    <img onClick={handleImg} src={avatar} alt="" />
                 </div>
             </div>
             <img className="sub-ava" src="https://res.cloudinary.com/dqccfamas/image/upload/v1680667229/Rectangle_190_o429ft.png" alt="" />

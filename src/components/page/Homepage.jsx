@@ -11,8 +11,8 @@ function Homepage() {
             <Navbar />
             <MainBg />
             <PopularRoute />
-            <NewestCourse/>
-            <Footer/>
+            <NewestCourse />
+            <Footer />
         </>
     )
 };
